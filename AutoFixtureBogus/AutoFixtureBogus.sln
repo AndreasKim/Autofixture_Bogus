@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoFixtureBogus", "AutoFixtureBogus\AutoFixtureBogus.csproj", "{6B34C08E-F4CA-4B80-8736-741253AD9953}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoFixtureBogus", "AutoFixtureBogus\AutoFixtureBogus.csproj", "{6B34C08E-F4CA-4B80-8736-741253AD9953}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoFixtureBogus.Tests", "AutoFixtureBogus.Tests\AutoFixtureBogus.Tests.csproj", "{049AF8CF-8A2D-4801-971A-5DF95808474C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoFixtureBogus.Tests", "AutoFixtureBogus.Tests\AutoFixtureBogus.Tests.csproj", "{049AF8CF-8A2D-4801-971A-5DF95808474C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoFixtureBogus.TestData", "AutoFixtureBogus.TestData\AutoFixtureBogus.TestData.csproj", "{FB3F0062-5903-46EA-9C44-19DDE1CAFE57}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{049AF8CF-8A2D-4801-971A-5DF95808474C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{049AF8CF-8A2D-4801-971A-5DF95808474C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{049AF8CF-8A2D-4801-971A-5DF95808474C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB3F0062-5903-46EA-9C44-19DDE1CAFE57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB3F0062-5903-46EA-9C44-19DDE1CAFE57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB3F0062-5903-46EA-9C44-19DDE1CAFE57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB3F0062-5903-46EA-9C44-19DDE1CAFE57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,17 +1,12 @@
 ﻿namespace AutoFixtureBogus.TestData;
 
-public class ExampleService
+public class ExampleService(IExampleRepository exampleRepository)
 {
-    private readonly IExampleRepository exampleRepository;
-
-    public ExampleService(IExampleRepository exampleRepository)
-    {
-        this.exampleRepository = exampleRepository;
-    }
+    private readonly IExampleRepository _exampleRepository = exampleRepository;
 
     public bool PerformAction() 
     {
-        return exampleRepository.Save();
+        return _exampleRepository.Save();
     }
 }
 
@@ -22,11 +17,6 @@ public interface IExampleRepository
 
 public class ExampleRepository : IExampleRepository
 {
-    public ExampleRepository()
-    {
-
-    }
-
     public bool Save()
     {
         return true;

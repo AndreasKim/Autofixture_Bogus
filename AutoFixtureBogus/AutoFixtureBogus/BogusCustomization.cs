@@ -1,4 +1,5 @@
 ﻿using AutoFixture;
+using AutoFixtureBogus.TestData;
 using Bogus;
 using System.Reflection;
 
@@ -17,12 +18,11 @@ public class BogusCustomization : ICustomization
                         where method.ReturnType.IsGenericType && method.ReturnType.GetGenericTypeDefinition() == typeof(Faker<>)
                       select method;
 
+        var registerMethod = GetType().GetMethod(nameof(Register)) 
+            ?? throw new InvalidOperationException("Register method not found.");
+
         foreach (var method in methods)
         {
-            var registerMethod = GetType().GetMethod(nameof(Register));
-            if (registerMethod == null)
-                continue;
-
             var fakerReturnType = method.ReturnType.GetGenericArguments().Single();
             var genericRegisterMethod = registerMethod.MakeGenericMethod(fakerReturnType);
             genericRegisterMethod.Invoke(null, [fixture, method]);
